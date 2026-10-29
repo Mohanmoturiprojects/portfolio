@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio Website</title>
+    <meta
+      name="description"
+      content="Mohan Moturi is a software developer at Logikal.ai, building e-commerce experiences, AI-powered travel products, and web application services."
+    />
+    <meta name="theme-color" content="#eef2f7" />
+    <title>Mohan Moturi | Software Developer</title>
     <!-- FontAwesome Icons -->
     <script
       src="https://kit.fontawesome.com/c4254e24a8.js"
@@ -15,24 +20,32 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
+        font-family: "Poppins", "Segoe UI", sans-serif;
+      }
+
+      .logo svg {
+        display: block;
+        width: 100%;
+        height: auto;
       }
 
       html {
         scroll-behavior: smooth;
       }
 
-      body {
-        background: #080808;
-        color: #fff;
-      }
+       body {
+        background: linear-gradient(135deg, #eef2f7 0%, #f8fafc 52%, #e8eef5 100%);
+        color: #172033;
+      } 
+       
+
       .container {
         padding: 10px 10%;
       }
 
       #header {
         width: 100%;
-        min-height: 100vh;
+        min-height: 88vh;
         background-size: cover;
         background-position: center;
       }
@@ -52,21 +65,143 @@
 
       .header-text h1 {
         font-size: 60px;
+        line-height: 1.12;
         margin-top: 20px;
       }
 
+      .hero-description {
+        max-width: 570px;
+        color: #aab7c8;
+        font-size: 17px;
+        line-height: 1.8;
+        margin-top: 22px;
+      }
+
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 28px;
+      }
+
+      .hero-actions .btn {
+        margin: 0;
+      }
+
+      .btn-primary {
+        background: #263b55;
+      }
+
+      .text-link {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .text-link span {
+        color: #8fb4d8;
+        margin-left: 5px;
+      }
+
       .header-text h1 span {
-        color: #ff004f;
+        color: #8fb4d8;
       }
 
       .header-img {
         flex-basis: 42%;
       }
 
-      .header-img img {
-        width: 100%;
-        border-radius: 10px;
+      .logo {
+        color: #8fb4d8;
         display: block;
+        width: 160px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        text-decoration: none;
+      }
+
+      .profile-frame {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(143, 180, 216, 0.2);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.035);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+        transition:
+          transform 350ms ease,
+          border-color 350ms ease,
+          box-shadow 350ms ease;
+      }
+
+      .profile-frame:hover {
+        transform: translateY(-8px);
+        border-color: rgba(143, 180, 216, 0.75);
+        box-shadow:
+          0 30px 65px rgba(0, 0, 0, 0.48),
+          0 0 28px rgba(143, 180, 216, 0.14);
+      }
+
+      .profile-photo {
+        display: block;
+        width: 100%;
+        height: clamp(360px, 42vw, 510px);
+        object-fit: cover;
+        object-position: center 18%;
+        transition:
+          transform 500ms ease,
+          filter 500ms ease;
+      }
+
+      .profile-frame:hover .profile-photo {
+        transform: scale(1.025);
+        filter: saturate(1.08) contrast(1.03);
+      }
+
+      .hero-card {
+        position: relative;
+        padding: 22px 24px 24px;
+        border-top: 1px solid rgba(143, 180, 216, 0.14);
+        background:
+          radial-gradient(ellipse at 100% 0, rgba(143, 180, 216, 0.12), transparent 55%),
+          rgba(255, 255, 255, 0.06);
+      }
+
+      .eyebrow,
+      .project-type {
+        color: #8fb4d8;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .hero-card h2 {
+        max-width: 360px;
+        margin: 9px 0 5px;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .hero-card p,
+      .about-col-2 > p {
+        color: #aab7c8;
+        line-height: 1.8;
+      }
+
+      .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .tech-list span {
+        border: 1px solid #35465b;
+        border-radius: 999px;
+        color: #dce5f0;
+        font-size: 12px;
+        padding: 7px 11px;
       }
 
       nav {
@@ -74,10 +209,6 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-      }
-
-      .logo {
-        width: 140px;
       }
 
       nav ul li {
@@ -97,7 +228,7 @@
         content: "";
         width: 0;
         height: 3px;
-        background: #ff004f;
+        background: #8fb4d8;
         position: absolute;
         left: 0;
         bottom: -6px;
@@ -110,7 +241,7 @@
 
       #about {
         padding: 80px 0;
-        color: #ababab;
+        color: #406ca7;
       }
 
       .row {
@@ -123,9 +254,24 @@
         flex-basis: 35%;
       }
 
-      .about-col-1 img {
-        width: 100%;
-        border-radius: 15px;
+      .about-highlight {
+        align-self: flex-start;
+        padding: 32px;
+        border: 1px solid #29384a;
+        border-radius: 14px;
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
+      }
+
+      .about-highlight h2 {
+        margin: 28px 0 16px;
+        font-size: 30px;
+        line-height: 1.25;
+      }
+
+      .about-highlight p {
+        color: #aab7c8;
+        line-height: 1.7;
       }
 
       .about-col-2 {
@@ -138,6 +284,13 @@
         color: #fff;
       }
 
+      .section-intro {
+        max-width: 650px;
+        margin-top: 14px;
+        color: #aab7c8;
+        line-height: 1.8;
+      }
+
       .tab-titles {
         display: flex;
         margin: 20px 0 40px;
@@ -145,6 +298,10 @@
 
       .tab-links {
         margin-right: 50px;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: #fff;
         font-size: 18px;
         font-weight: 500;
         cursor: pointer;
@@ -155,7 +312,7 @@
         content: "";
         width: 0;
         height: 3px;
-        background: #ff004f;
+        background: #8fb4d8;
         position: absolute;
         left: 0;
         bottom: -8px;
@@ -171,9 +328,40 @@
         margin: 10px 0;
       }
 
-      .tab-contents ul li span {
-        color: #b54769;
+      .experience-entry {
+        margin-bottom: 24px;
+      }
+
+      .experience-entry > span {
+        color: #8fb4d8;
         font-size: 14px;
+      }
+
+      .experience-entry h3 {
+        margin: 6px 0 8px;
+        color: #fff;
+        font-size: 18px;
+      }
+
+      .experience-entry p,
+      .experience-entry ul {
+        color: #aab7c8;
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .experience-entry ul {
+        padding-left: 20px;
+      }
+
+      .experience-entry ul li {
+        margin: 5px 0;
+      }
+
+      .tab-contents ul li span {
+        color: #05488a;
+        font-size: 16px;
+        font-weight: 600;
       }
 
       .tab-contents {
@@ -196,7 +384,8 @@
       }
 
       .services-list div {
-        background: #262626;
+        background: rgba(255, 255, 255, 0.045);
+        border: 1px solid #29384a;
         padding: 40px;
         font-size: 13px;
         font-weight: 300;
@@ -224,7 +413,8 @@
       }
 
       .services-list div:hover {
-        background: #ff004f;
+        border-color: #8fb4d8;
+        background: rgba(255, 255, 255, 0.08);
         transform: translateY(-10px);
       }
 
@@ -232,79 +422,105 @@
         padding: 50px 0;
       }
 
+      #approach {
+        padding: 48px 0 20px;
+      }
+
+      .approach-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+        margin-top: 32px;
+      }
+
+      .approach-card {
+        padding: 26px;
+        border: 1px solid #29384a;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.045);
+        transition:
+          transform 250ms ease,
+          border-color 250ms ease,
+          box-shadow 250ms ease;
+      }
+
+      .approach-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(143, 180, 216, 0.65);
+        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.25);
+      }
+
+      .approach-card i {
+        margin-bottom: 18px;
+        color: #8fb4d8;
+        font-size: 24px;
+      }
+
+      .approach-card h3 {
+        margin-bottom: 10px;
+        font-size: 19px;
+      }
+
+      .approach-card p {
+        color: #aab7c8;
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
       .work-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-gap: 22px;
         margin-top: 50px;
       }
 
       .work {
+        min-height: 310px;
+        padding: 28px;
         border-radius: 10px;
-        position: relative;
-        overflow: hidden;
+        border: 1px solid #29384a;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.065),
+          rgba(255, 255, 255, 0.025)
+        );
+        transition: transform 0.3s, border-color 0.3s;
       }
 
-      .work img {
-        width: 100%;
-        border-radius: 10px;
-        display: block;
-        transition: transform 0.5s;
+      .work:hover {
+        border-color: #8fb4d8;
+        transform: translateY(-6px);
       }
 
       .layer {
-        width: 100%;
-        height: 0;
-        background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-        border-radius: 10px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 0 40px;
-        text-align: center;
-        transition: height 0.5s;
+        display: block;
       }
 
       .layer h3 {
-        font-weight: 500;
-        margin-bottom: 20px;
+        font-size: 23px;
+        font-weight: 600;
+        margin: 18px 0 12px;
       }
 
       .layer p {
         font-size: 14px;
+        line-height: 1.8;
+        color: #aab7c8;
       }
 
       .layer a {
-        margin-top: 20px;
-        color: #ff004f;
+        margin-top: 18px;
+        color: #8fb4d8;
         text-decoration: none;
-        font-size: 18px;
-        line-height: 60px;
-        background: #fff;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        text-align: center;
-      }
-
-      .work:hover img {
-        transform: scale(1.1);
-      }
-
-      .work:hover .layer {
-        height: 100%;
+        font-size: 14px;
+        font-weight: 600;
       }
 
       .btn {
         display: block;
         margin: 50px auto;
         width: fit-content;
-        border: 1px solid #ff004f;
+        border: 1px solid #8fb4d8;
         padding: 14px 50px;
         border-radius: 6px;
         text-decoration: none;
@@ -313,93 +529,146 @@
       }
 
       .btn:hover {
-        background: #ff004f;
+        background: #263b55;
       }
 
       #contact {
-        padding: 50px 0;
+        padding: 90px 0 70px;
       }
 
-      .contact-left {
-        flex-basis: 35%;
+      .contact-panel {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 48px;
+        align-items: center;
+        padding: 52px;
+        border: 1px solid #2d3e53;
+        border-radius: 20px;
+        background:
+          radial-gradient(ellipse at 100% 0, rgba(143, 180, 216, 0.13), transparent 45%),
+          linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025) 70%
+          );
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
       }
 
-      .contact-right {
-        flex-basis: 60%;
+      .contact-heading h1 {
+        margin: 14px 0;
+        font-size: clamp(36px, 5vw, 56px);
+        line-height: 1.08;
       }
 
-      .contact-left p {
-        margin-top: 30px;
+      .contact-heading {
+        grid-column: 2;
+        grid-row: 1;
       }
 
-      .contact-left p i {
-        color: #ff004f;
-        margin-right: 15px;
-        font-size: 25px;
+      .contact-heading > p:last-child {
+        max-width: 470px;
+        color: #aab7c8;
+        line-height: 1.8;
       }
 
-      .social-icons {
-        margin-top: 30px;
+      .contact-methods {
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        gap: 14px;
       }
 
-      .social-icons a {
-        text-decoration: none;
-        font-size: 30px;
-        margin-right: 15px;
-        color: #ababab;
-        display: inline-block;
-        transition: transform 0.5s;
-      }
-
-      .social-icons a:hover {
-        color: #ff004f;
-        transform: translateY(-5px);
-      }
-
-      .btn.btn2 {
-        display: inline-block;
-        background: #ff004f;
-      }
-
-      .contact-right form {
-        width: 100%;
-      }
-
-      form input,
-      form textarea {
-        width: 100%;
-        border: 0;
-        outline: none;
-        background: #262626;
-        padding: 15px;
-        margin: 15px 0;
+      .contact-method {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px;
+        border: 1px solid #2d3e53;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.035);
         color: #fff;
-        font-size: 18px;
-        border-radius: 6px;
+        text-decoration: none;
+        transition:
+          transform 250ms ease,
+          border-color 250ms ease,
+          background 250ms ease;
       }
 
-      form .btn2 {
-        padding: 14px 60px;
+      .contact-method:hover {
+        transform: translateY(-3px);
+        border-color: #8fb4d8;
+        background: rgba(143, 180, 216, 0.1);
+      }
+
+      .contact-method > i {
+        display: grid;
+        width: 46px;
+        height: 46px;
+        flex: 0 0 46px;
+        place-items: center;
+        border-radius: 12px;
+        color: #8fb4d8;
+        background: rgba(143, 180, 216, 0.13);
         font-size: 18px;
-        margin-top: 20px;
+      }
+
+      .contact-method span {
+        display: grid;
+        gap: 4px;
+        overflow-wrap: anywhere;
+      }
+
+      .contact-method small {
+        color: #aab7c8;
+        font-size: 12px;
+      }
+
+      .contact-method strong {
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .contact-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 6px;
+        padding: 15px 20px;
+        border: 1px solid #8fb4d8;
+        border-radius: 9px;
+        background: #263b55;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 250ms ease, transform 250ms ease;
+      }
+
+      .contact-cta:hover {
+        transform: translateY(-2px);
+        background: #365b83;
+      }
+
+      nav button.fas {
+        display: none;
+        border: 0;
+        background: none;
+        color: #fff;
         cursor: pointer;
+      }
+
+      nav:not(.is-open) button.menu-close,
+      nav.is-open button.menu-open {
+        display: none;
       }
 
       .copyright {
         width: 100%;
         text-align: center;
         padding: 25px 0;
-        background: #262626;
+        background: rgba(255, 255, 255, 0.035);
         font-weight: 300;
         margin-top: 20px;
-      }
-
-      .copyright i {
-        color: #ff004f;
-      }
-
-      nav .fas {
-        display: none;
       }
 
       @media only screen and (max-width: 768px) {
@@ -417,22 +686,19 @@
       }
 
       @media only screen and (max-width: 600px) {
-        #header {
-          background-image: url(images/phonebackground.png);
-        }
         .header-text {
-          margin-top: 100%;
+          margin-top: 45px;
           font-size: 16px;
         }
         .header-text h1 {
           font-size: 30px;
         }
-        nav .fas {
+        nav button.fas {
           display: block;
           font-size: 25px;
         }
         nav ul {
-          background: #ff004f;
+          background: rgba(255, 255, 255, 0.06);
           position: fixed;
           top: 0;
           right: -200px;
@@ -446,14 +712,12 @@
           display: block;
           margin: 25px;
         }
-        nav ul .fas {
-          position: absolute;
+        nav button.menu-close {
+          position: fixed;
           top: 25px;
-          left: 25px;
+          right: 25px;
+          z-index: 3;
           cursor: pointer;
-        }
-        .subtitle {
-          font-size: 40px;
         }
         .about-col-1,
         .about-col-2 {
@@ -469,17 +733,166 @@
           font-size: 16px;
           margin-right: 20px;
         }
-        .contact-left,
-        .contact-right {
-          flex-basis: 100%;
+        .contact-panel {
+          grid-template-columns: 1fr;
+          gap: 28px;
+          padding: 28px 22px;
+        }
+        .contact-heading,
+        .contact-methods {
+          grid-column: 1;
+          grid-row: auto;
+        }
+        #contact {
+          padding: 60px 0 40px;
+        }
+        .hero-card {
+          padding: 18px;
+        }
+        .profile-photo {
+          height: 380px;
+        }
+        .hero-card h2 {
+          font-size: 24px;
+        }
+        .hero-description {
+          font-size: 15px;
+        }
+        .subtitle {
+          font-size: 36px;
+        }
+        .about-highlight {
+          margin-bottom: 30px;
+        }
+        .work {
+          min-height: 0;
         }
       }
 
-      #msg {
-        color: #61b752;
-        margin-top: -40px;
-        display: block;
+      nav ul li a,
+      nav button.fas,
+      .text-link,
+      .subtitle,
+      .tab-links,
+      .experience-entry h3,
+      .services-list div h2,
+      .approach-card h3,
+      .layer h3,
+      .contact-heading h1 {
+        color: #172033;
       }
+
+      .hero-description,
+      .hero-card p,
+      .about-col-2 > p,
+      .about-highlight p,
+      .section-intro,
+      .experience-entry p,
+      .experience-entry ul,
+      .approach-card p,
+      .layer p,
+      .contact-heading > p:last-child {
+        color: #475569;
+      }
+
+      .header-text h1 span,
+      .text-link span,
+      .logo,
+      .eyebrow,
+      .project-type,
+      .tab-contents ul li span,
+      .experience-entry > span,
+      .approach-card i,
+      .layer a,
+      .contact-method > i {
+        color: #315f8c;
+      }
+
+      nav ul li a::after,
+      .tab-links::after {
+        background: #315f8c;
+      }
+
+      .profile-frame,
+      .hero-card,
+      .about-highlight,
+      .services-list div,
+      .approach-card,
+      .work,
+      .contact-panel,
+      .contact-method,
+      .copyright {
+        border-color: #d8e0ea;
+        background-color: rgba(255, 255, 255, 0.82);
+        box-shadow: 0 14px 34px rgba(30, 48, 70, 0.08);
+      }
+
+      .hero-card {
+        background:
+          radial-gradient(ellipse at 100% 0, rgba(49, 95, 140, 0.08), transparent 55%),
+          rgba(255, 255, 255, 0.94);
+      }
+
+      .about-highlight,
+      .work {
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(255, 255, 255, 0.78)
+        );
+      }
+
+      .contact-panel {
+        background:
+          radial-gradient(ellipse at 100% 0, rgba(49, 95, 140, 0.08), transparent 45%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.8));
+      }
+
+      .contact-method {
+        color: #172033;
+      }
+
+      .contact-method small {
+        color: #64748b;
+      }
+
+      .contact-method > i {
+        background: rgba(49, 95, 140, 0.1);
+      }
+
+      .tech-list span {
+        border-color: #d5deea;
+        color: #334155;
+      }
+
+      .contact-cta,
+      .btn-primary {
+        border-color: #315f8c;
+        background: #315f8c;
+        color: #fff;
+      }
+
+      .contact-cta:hover,
+      .btn:hover {
+        background: #284e76;
+      }
+
+      .tab-links:focus-visible,
+      .contact-method:focus-visible,
+      .contact-cta:focus-visible,
+      .text-link:focus-visible,
+      nav a:focus-visible {
+        outline: 3px solid rgba(49, 95, 140, 0.45);
+        outline-offset: 3px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        nav ul {
+          background: rgba(255, 255, 255, 0.97);
+          box-shadow: -12px 0 30px rgba(30, 48, 70, 0.12);
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -487,24 +900,74 @@
     <div id="header">
       <div class="container">
         <nav>
-          <img src="images/logo.png" class="logo" />
+          <a class="logo" href="#header" aria-label="Mohan Moturi home">
+            <svg
+              viewBox="0 0 200 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-full h-auto"
+              role="img"
+              aria-label="Mohan"
+            >
+              <rect x="2" y="2" width="56" height="56" rx="12" fill="url(#grad1)"></rect>
+              <path d="M18 42V18L28 30L38 18V42" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <text x="72" y="37" fill="#172033" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="28" letter-spacing="1">MOHAN</text>
+              <circle cx="178" cy="33" r="4" fill="#315f8c"></circle>
+              <defs>
+                <linearGradient id="grad1" x1="2" y1="2" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#315f8c"></stop>
+                  <stop offset="1" stop-color="#172033"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </a>
           <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
+            <li><a href="#header" onclick="closemenu()">Home</a></li>
+            <li><a href="#about" onclick="closemenu()">About</a></li>
+            <li><a href="#services" onclick="closemenu()">What I Build</a></li>
+            <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
+            <li><a href="#contact" onclick="closemenu()">Contact</a></li>
           </ul>
-          <i class="fas fa-bars" onclick="openmenu()"></i>
+          <button class="fas fa-times menu-close" type="button" onclick="closemenu()" aria-label="Close navigation"></button>
+          <button class="fas fa-bars menu-open" type="button" onclick="openmenu()" aria-label="Open navigation" aria-expanded="false"></button>
         </nav>
         <div class="header-row">
           <div class="header-text">
-            <p>Full Stack Developer</p>
-            <h1>Hi, I'm <span>M.Mohan</span><br />From India</h1>
+            <p class="eyebrow">Software Developer · Logikal.ai</p>
+            <h1>I build <span>digital products</span> that solve real problems.</h1>
+            <p class="hero-description">
+              Hi, I’m Mohan — a software developer working on e-commerce and
+              AI-powered travel experiences, from product workflows to the APIs
+              behind them.
+            </p>
+            <div class="hero-actions">
+              <a href="#portfolio" class="btn btn-primary">Explore my work</a>
+              <a href="#contact" class="text-link">Let’s connect <span aria-hidden="true">→</span></a>
+            </div>
           </div>
           <div class="header-img">
-            <img src="c:\Users\LogiKal\Downloads\M  Image.jpg" alt="M.Mohan Profile" />
+            <div class="profile-frame">
+              <img
+                class="profile-photo"
+                src="images/mohan-profile.png"
+                alt="Portrait of Mohan Moturi"
+              />
+              <div class="hero-card">
+                <p class="eyebrow">Software Developer · Logikal.ai</p>
+                <div>
+                  <h2>Mohan Moturi</h2>
+                  <p>
+                    Developing an AI-enabled warehouse management system for
+                    smarter, more efficient operations.
+                  </p>
+                </div>
+                <!-- <div class="tech-list" aria-label="Focus areas">
+                  <span>E-commerce</span>
+                  <span>AI travel</span>
+                  <span>Web APIs</span>
+                </div> -->
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -514,58 +977,76 @@
     <div id="about">
       <div class="container">
         <div class="row">
-          <div class="about-col-1">
-            <img src="images/user.png" />
+          <div class="about-col-1 about-highlight">
+            <span class="eyebrow">Product-minded engineering</span>
+            <h2>From feature idea<br />to a useful product.</h2>
+            <p>Building, learning, and improving with the people who use what we make.</p>
           </div>
           <div class="about-col-2">
             <h1 class="subtitle">About Me</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-              malesuada. Nulla facilisi. Sed non feugiat lacus.
+              I’m a software developer at Logikal.ai, contributing to digital
+              products across e-commerce and AI-assisted trip creation. I enjoy
+              turning product requirements into clear user flows, dependable
+              application features, and maintainable services. I bring a
+              learning mindset, ownership, and a focus on shipping thoughtful
+              solutions with a team.
             </p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
+              <button type="button" class="tab-links active-link" role="tab" aria-selected="true" aria-controls="skills" onclick="opentab(event, 'skills')">
+                Focus
+              </button>
+              <button type="button" class="tab-links" role="tab" aria-selected="false" aria-controls="experience" onclick="opentab(event, 'experience')">
                 Experience
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
+              </button>
+              <button type="button" class="tab-links" role="tab" aria-selected="false" aria-controls="education" onclick="opentab(event, 'education')">Education</button>
             </div>
 
-            <div class="tab-contents active-tab" id="skills">
+            <div class="tab-contents active-tab" id="skills" role="tabpanel">
               <ul>
-                <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
-                <li><span>Web Development</span><br />Web App Development</li>
-                <li>
-                  <span>App Development</span><br />Building Android/iOS apps
+                <li><span>Backend</span><br />Java, Spring Boot, REST APIs, and microservices</li>
+                <li><span>Frontend</span><br />React, Vue 3, and modern frontend development</li>
+                <li><span>Data & AI</span><br />SQL and OpenAI integrations</li>
+                <li><span>Product domains</span><br />Warehouse management and e-commerce applications</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience" role="tabpanel">
+              <ul>
+                <li class="experience-entry">
+                  <span>Aug 2025 – Dec 2025</span>
+                  <h3>Java Developer Intern · Kquebe Technologies</h3>
+                  <ul>
+                    <li>
+                      Built a Java and Spring Boot project integrated with
+                      OpenAI to deliver AI-powered application features.
+                    </li>
+                    <li>
+                      Developed backend functionality connecting application
+                      workflows with OpenAI requests and responses.
+                    </li>
+                  </ul>
+                </li>
+                <li class="experience-entry">
+                  <span>Current</span>
+                  <h3>Software Developer · Logikal.ai</h3>
+                  <p>
+                    Developing a warehouse management system enhanced with AI
+                    agents to support smarter, more efficient warehouse
+                    workflows.
+                  </p>
                 </li>
               </ul>
             </div>
 
-            <div class="tab-contents" id="experience">
+            <div class="tab-contents" id="education" role="tabpanel">
               <ul>
                 <li>
-                  <span>2021 - Current</span><br />UI/UX Design Training at ET
-                  Institute
+                  <span>2021–24</span><br />B.Tech, Gudlavalleru Engineering College
                 </li>
-                <li><span>2019 - 2021</span><br />Team lead at Startup LLC</li>
-                <li>
-                  <span>2017 - 2019</span><br />UI/UX Design Executive at Coin
-                  Digital
-                </li>
-              </ul>
-            </div>
-
-            <div class="tab-contents" id="education">
-              <ul>
-                <li>
-                  <span>2021-24</span><br />BTech from Gudlavalleru Engg Collage.
-                </li>
-                <li><span>2018-21</span><br />Diplamo S.M.V.M Polytechnique Collage.</li>
-                <li><span>2017-18</span><br />High School from Z.P.H.S High School.</li>
+                <li><span>2018–21</span><br />Diploma, S.M.V.M. Polytechnic College</li>
+                <li><span>2017–18</span><br />Z.P.H.S. High School</li>
               </ul>
             </div>
           </div>
@@ -576,35 +1057,71 @@
     <!-- Services Section -->
     <div id="services">
       <div class="container">
-        <h1 class="subtitle">My Services</h1>
+        <h1 class="subtitle">What I Build</h1>
         <div class="services-list">
           <div>
             <i class="fa-solid fa-code"></i>
-            <h2>E-Commerece Application</h2>
+            <h2>E-commerce experiences</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-              perspiciatis unde omnis iste natus error sit voluptatem.
+              Customer-facing shopping journeys designed around clear
+              discovery, product details, and a smoother path from browsing to
+              purchase.
             </p>
-            <a href="#">Learn more</a>
           </div>
           <div>
-            <i class="fa-solid fa-crop"></i>
-            <h2>Rest & Micro services</h2>
+            <i class="fa-solid fa-compass"></i>
+            <h2>AI trip creation</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-              perspiciatis unde omnis iste natus error sit voluptatem.
+              Travel-planning experiences that help turn a destination and
+              preferences into a more personalized trip-planning journey.
             </p>
-            <a href="#">Learn more</a>
           </div>
           <div>
-            <i class="fa-brands fa-app-store"></i>
-            <h2>App Design</h2>
+            <i class="fa-solid fa-layer-group"></i>
+            <h2>APIs & application services</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-              perspiciatis unde omnis iste natus error sit voluptatem.
+              REST APIs and service-oriented application workflows that
+              connect product features and support reliable experiences.
             </p>
-            <a href="#">Learn more</a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Engineering Approach Section -->
+    <div id="approach">
+      <div class="container">
+        <p class="eyebrow">Beyond the feature list</p>
+        <h1 class="subtitle">How I Work</h1>
+        <p class="section-intro">
+          The engineering habits I bring to product development and the teams I
+          work with.
+        </p>
+        <div class="approach-grid">
+          <article class="approach-card">
+            <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+            <h3>Start with the user</h3>
+            <p>
+              I aim to understand the problem behind a request and keep the
+              experience clear while shaping a practical solution.
+            </p>
+          </article>
+          <article class="approach-card">
+            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+            <h3>Think in connected systems</h3>
+            <p>
+              I consider how application features, REST APIs, and services fit
+              together to support a complete product workflow.
+            </p>
+          </article>
+          <article class="approach-card">
+            <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+            <h3>Keep learning and improving</h3>
+            <p>
+              I value feedback, collaboration, and continuous learning as part
+              of building and refining useful software.
+            </p>
+          </article>
         </div>
       </div>
     </div>
@@ -612,87 +1129,104 @@
     <!-- Portfolio / My Work Section -->
     <div id="portfolio">
       <div class="container">
-        <h1 class="subtitle">My Work</h1>
+        <h1 class="subtitle">Selected Work</h1>
+        <p class="section-intro">
+          Product areas I’m contributing to at Logikal.ai. Project details are
+          kept high-level; the focus is on the problems and experiences.
+        </p>
         <div class="work-list">
           <div class="work">
-            <img src="images/work-1.png" />
             <div class="layer">
-              <h3>Social Media App</h3>
+              <span class="project-type">E-commerce · Logikal.ai</span>
+              <h3>Online shopping experience</h3>
               <p>
-                The app connects you to talented people around the world.
-                Download it from play store.
+                Developing product features for an e-commerce experience,
+                helping customers move from product discovery toward checkout
+                through a clear, connected journey.
               </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
             </div>
           </div>
           <div class="work">
-            <img src="images/work-2.png" />
             <div class="layer">
-              <h3>Music App</h3>
+              <span class="project-type">AI travel · Logikal.ai</span>
+              <h3>AI trip creator</h3>
               <p>
-                The app connects you to talented people around the world.
-                Download it from play store.
+                Contributing to a trip-planning product that uses AI to help
+                travelers shape destination ideas and preferences into a
+                personalized itinerary experience.
               </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
             </div>
           </div>
           <div class="work">
-            <img src="images/work-3.png" />
             <div class="layer">
-              <h3>Online Shopping App</h3>
+              <span class="project-type">Backend · Logikal.ai</span>
+              <h3>REST APIs & microservices</h3>
               <p>
-                The app connects you to talented people around the world.
-                Download it from play store.
+                Building and connecting application services that support
+                product workflows, data exchange, and the features users rely
+                on.
               </p>
-              <a href="#"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
             </div>
           </div>
         </div>
-        <a href="#" class="btn">See more</a>
       </div>
     </div>
 
     <!-- Contact Section -->
     <div id="contact">
       <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="subtitle">Contact Me</h1>
-            <p><i class="fa-solid fa-paper-plane"></i> mohanmoturi43@gmail.com</p>
-            <p><i class="fa-solid fa-square-phone"></i> +918247858885</p>
-            <div class="social-icons">
-              <a href="https://facebook.com"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-              <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-            <a href="images/mycv.pdf" download class="btn btn2">Download CV</a>
+        <div class="contact-panel">
+          <div class="contact-heading">
+            <p class="eyebrow">Let’s build something useful</p>
+            <h1>Have a project<br />in mind?</h1>
+            <p>
+              I’m always glad to connect with people building thoughtful
+              products. Send me a note and tell me what you’re working on.
+            </p>
           </div>
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="Email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message"
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
-            </form>
-            <span id="msg"></span>
+          <div class="contact-methods">
+            <a class="contact-method" href="mailto:mohanmoturi43@gmail.com">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <span>
+                <small>Email</small>
+                <strong>mohanmoturi43@gmail.com</strong>
+              </span>
+            </a>
+            <a class="contact-method" href="tel:+918247858885">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <span>
+                <small>Phone</small>
+                <strong>+91 82478 58885</strong>
+              </span>
+            </a>
+            <a
+              class="contact-method"
+              href="https://github.com/Mohanmoturiprojects"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>
+                <small>GitHub</small>
+                <strong>View my GitHub profile</strong>
+              </span>
+            </a>
+            <a
+              class="contact-method"
+              href="https://www.linkedin.com/in/moturi-mohan-913130268"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>
+                <small>LinkedIn</small>
+                <strong>Connect with me on LinkedIn</strong>
+              </span>
+            </a>
+            <a class="contact-cta" href="mailto:mohanmoturi43@gmail.com">
+              Start a conversation
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -701,8 +1235,7 @@
     <!-- Footer / Copyright -->
     <div class="copyright">
       <p>
-        Copyright © Mohan. Made with <i class="fa-solid fa-heart"></i> by MSR
-        Tutorials
+        © <span id="current-year"></span> Mohan Moturi · Software Developer
       </p>
     </div>
 
@@ -711,45 +1244,36 @@
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
 
-      function opentab(tabname) {
+      function opentab(event, tabname) {
         for (let tablink of tablinks) {
           tablink.classList.remove("active-link");
+          tablink.setAttribute("aria-selected", "false");
         }
         for (let tabcontent of tabcontents) {
           tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
+        event.currentTarget.setAttribute("aria-selected", "true");
         document.getElementById(tabname).classList.add("active-tab");
       }
 
       var sidemenu = document.getElementById("sidemenu");
+      var navigation = document.querySelector("nav");
 
       function openmenu() {
         sidemenu.style.right = "0";
+        navigation.classList.add("is-open");
+        document.querySelector(".menu-open").setAttribute("aria-expanded", "true");
       }
       function closemenu() {
         sidemenu.style.right = "-200px";
+        navigation.classList.remove("is-open");
+        document.querySelector(".menu-open").setAttribute("aria-expanded", "false");
       }
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
     </script>
 
-    <!-- Google Sheets Integration Script -->
-    <script>
-      const scriptURL = "<YOUR_GOOGLE_SHEET_WEB_APP_URL>";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Message sent successfully";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
   </body>
 </html>
